@@ -27,6 +27,7 @@ public class FirstAlgorithm {
         int n = vertices.size();
 
         // Testing the vertices
+
         //System.out.println("Vertices: " + vertices);
         //System.out.println("n: " + n);
 

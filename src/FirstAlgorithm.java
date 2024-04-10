@@ -19,12 +19,19 @@ public class FirstAlgorithm {
      * @param graph the graph.
      * @return the maximum clique in the graph.
      */
+    //Assignments
+    private static int a = 0;
+    //Comparisons
+    private static int c = 0;
     public static Set<Vertex> findMaxClique(Graph graph) {
         Set<Vertex> maxClique = new HashSet<>();
+        a++;
         Set<Vertex> currentClique = new HashSet<>();
-
+        a++;
         List<Vertex> vertices = new ArrayList<>(graph.getVertices().keySet());
+        a++;
         int n = vertices.size();
+        a++;
 
         // Testing the vertices
 
@@ -32,18 +39,27 @@ public class FirstAlgorithm {
         //System.out.println("n: " + n);
 
         // Enumerar todos los subconjuntos de vértices
+        a++;
         for (int i = 0; i < (1 << n); i++) {
+            c += 2;
+            a++;
             currentClique.clear();
             for (int j = 0; j < n; j++) {
+                a++;
+                c++;
                 if ((i & (1 << j)) > 0) {
+                    c += 2;
                     currentClique.add(vertices.get(j));
                 }
             }
             // Verificar si el subconjunto forma un clique
             if (isClique(currentClique, graph)) {
+                c++;
                 // Actualizar el clique máximo
                 if (currentClique.size() > maxClique.size()) {
+                    c++;
                     maxClique = new HashSet<>(currentClique);
+                    a++;
                 }
             }
         }
@@ -62,6 +78,7 @@ public class FirstAlgorithm {
         for (Vertex vertex1 : clique) {
             for (Vertex vertex2 : clique) {
                 if (vertex1 != vertex2 && !graph.hasEdge(vertex1.getLabel(), vertex2.getLabel())) {
+                    c+=2;
                     return false;
                 }
             }
@@ -88,5 +105,7 @@ public class FirstAlgorithm {
         for (Vertex vertex : maxClique) {
             System.out.println(vertex.getLabel());
         }
+        System.out.println("Total assignments: "+ a);
+        System.out.println("Total comparisons: "+ c);
     }
 }

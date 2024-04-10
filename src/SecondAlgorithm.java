@@ -9,6 +9,10 @@ public class SecondAlgorithm {
     private List<Vertex> maxClique;
     private Graph graph;
 
+    //Asignaciones
+    private static int a = 0;
+    //Comparaciones
+    private static int c = 0;
     /**
      * Create a new instance of the second algorithm to find the maximum clique in a graph.
      *
@@ -25,7 +29,9 @@ public class SecondAlgorithm {
      */
     public void findMaxClique() {
         List<Vertex> vertices = new ArrayList<>(graph.getVertices().keySet());
+        a++;
         List<Vertex> currentClique = new ArrayList<>();
+        a++;
         deepFirstSearch(vertices, currentClique, 0);
     }
 
@@ -38,24 +44,33 @@ public class SecondAlgorithm {
      */
     private void deepFirstSearch(List<Vertex> vertices, List<Vertex> currentClique, int index) {
         if (index == vertices.size()) {
+            c++;
             if (isClique(currentClique)) {
+                c++;
                 if (currentClique.size() > maxSize) {
+                    c++;
                     maxSize = currentClique.size();
+                    a++;
                     maxClique = new ArrayList<>(currentClique);
+                    a++;
                 }
             }
             return;
         }
 
         Vertex v = vertices.get(index);
+        a++;
         // Intenta agregar el vértice actual al clique
         currentClique.add(v);
+        a++;
         // Si el clique actual sigue siendo un clique válido, continúa explorando
         if (isClique(currentClique)) {
+            c++;
             deepFirstSearch(vertices, currentClique, index + 1);
         }
         // Elimina el vértice actual del clique y continúa explorando sin él
         currentClique.remove(v);
+        a++;
         deepFirstSearch(vertices, currentClique, index + 1);
     }
 
@@ -66,9 +81,16 @@ public class SecondAlgorithm {
      * @return true if the list of vertices is a clique in the graph, false otherwise.
      */
     private boolean isClique(List<Vertex> clique) {
+        //asignacion i = 0
+        a++;
         for (int i = 0; i < clique.size(); i++) {
+            a++;
+            c++;
             for (int j = i + 1; j < clique.size(); j++) {
+                a += 2;
+                c++;
                 if (!graph.hasEdge(clique.get(i).getLabel(), clique.get(j).getLabel())) {
+                    c+=2;
                     return false;
                 }
             }
@@ -113,6 +135,9 @@ public class SecondAlgorithm {
         for (Vertex vertex : secondAlgorithm.getMaxClique()) {
             System.out.println(vertex.getLabel());
         }
+
+        System.out.println("Total assignments: "+ a);
+        System.out.println("Total comparisons: "+ c);
     }
 }
 

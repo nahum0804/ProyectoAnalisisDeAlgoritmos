@@ -28,7 +28,7 @@ public class SecondAlgorithm {
      * Find the maximum clique in a graph.
      */
     public void findMaxClique() {
-        List<Vertex> vertices = new ArrayList<>(graph.getVertices().keySet());
+        List<Vertex> vertices = new ArrayList<>(graph.getVertices().values());
         a++;
         List<Vertex> currentClique = new ArrayList<>();
         a++;
@@ -133,10 +133,10 @@ public class SecondAlgorithm {
         //System.out.println("Vértices del clique máximo: " + secondAlgorithm.getMaxClique());
         //
         for (Vertex vertex : secondAlgorithm.getMaxClique()) {
-            System.out.println(vertex.getLabel());
+            System.out.print(vertex.getLabel() + " ");
         }
 
-        System.out.println("Total assignments: "+ a);
+        System.out.println("\nTotal assignments: "+ a);
         System.out.println("Total comparisons: "+ c);
     }
 }

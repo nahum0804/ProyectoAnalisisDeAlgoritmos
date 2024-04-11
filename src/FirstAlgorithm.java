@@ -28,7 +28,7 @@ public class FirstAlgorithm {
         a++;
         Set<Vertex> currentClique = new HashSet<>();
         a++;
-        List<Vertex> vertices = new ArrayList<>(graph.getVertices().keySet());
+        List<Vertex> vertices = new ArrayList<>(graph.getVertices().values());
         a++;
         int n = vertices.size();
         a++;
@@ -103,9 +103,9 @@ public class FirstAlgorithm {
         // Imprimir el clique máximo
         System.out.print("Clique máximo: ");
         for (Vertex vertex : maxClique) {
-            System.out.println(vertex.getLabel());
+            System.out.print(vertex.getLabel() + " ");
         }
-        System.out.println("Total assignments: "+ a);
+        System.out.println("\nTotal assignments: "+ a);
         System.out.println("Total comparisons: "+ c);
     }
 }

@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -117,13 +116,15 @@ public class SecondAlgorithm {
     }
 
     /**
-     * Main method to find the maximum clique in a graph.
+     * Main method to execute the algorithm.
      *
-     * @param args the input arguments.
+     * @param numero
      */
-    public static void main(String[] args) {
+    public static void start(int numero) {
+
+        // Crear el grafo
         Graph graph = new Graph();
-        graph.createGraph();
+        graph.createGraph(numero);
 
         SecondAlgorithm secondAlgorithm = new SecondAlgorithm(graph);
         secondAlgorithm.findMaxClique();
@@ -135,6 +136,8 @@ public class SecondAlgorithm {
         for (Vertex vertex : secondAlgorithm.getMaxClique()) {
             System.out.print(vertex.getLabel() + " ");
         }
+
+        System.out.println("\nTamaño del clique máximo: " + secondAlgorithm.getMaxSize());
 
         System.out.println("\nTotal assignments: "+ a);
         System.out.println("Total comparisons: "+ c);

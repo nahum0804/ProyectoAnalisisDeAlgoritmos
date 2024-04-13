@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 
 // FirstAlgorithm.java
@@ -87,14 +84,15 @@ public class FirstAlgorithm {
     }
 
     /**
-     * Main method.
+     * Main method to execute the algorithm.
      *
-     * @param args the arguments.
+     * @param numero
      */
-    public static void main(String[] args) {
+    public static void start(int numero)  {
+
         // Crear el grafo
         Graph graph = new Graph();
-        graph.createGraph();
+        graph.createGraph(numero);
 
         // Encontrar el clique máximo
         Set<Vertex> maxClique = findMaxClique(graph);
@@ -105,6 +103,7 @@ public class FirstAlgorithm {
         for (Vertex vertex : maxClique) {
             System.out.print(vertex.getLabel() + " ");
         }
+        System.out.println("\nTamaño del clique máximo: " + maxClique.size());
         System.out.println("\nTotal assignments: "+ a);
         System.out.println("Total comparisons: "+ c);
     }

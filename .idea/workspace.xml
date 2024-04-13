@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5c1ddda-61b6-43a7-a75b-950a16d85664" name="Changes" comment="Second algorithm is done! (Look a somes posible errors)">
+    <list default="true" id="c5c1ddda-61b6-43a7-a75b-950a16d85664" name="Changes" comment="Bug fixed!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SecondAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SecondAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vertex.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712427452849</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Bug fixed!">
+      <created>1712816646318</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712816646318</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +128,7 @@
     <MESSAGE value="Create Graph Creation Logic" />
     <MESSAGE value="First Algorithm is done!" />
     <MESSAGE value="Divided Algorithms." />
-    <option name="LAST_COMMIT_MESSAGE" value="Divided Algorithms." />
+    <MESSAGE value="Bug fixed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixed!" />
   </component>
 </project>

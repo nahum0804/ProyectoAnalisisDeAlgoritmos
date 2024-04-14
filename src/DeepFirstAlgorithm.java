@@ -1,9 +1,7 @@
-import java.util.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class SecondAlgorithm {
+public class DeepFirstAlgorithm {
     private int maxSize;
     private List<Vertex> maxClique;
     private Graph graph;
@@ -17,7 +15,7 @@ public class SecondAlgorithm {
      *
      * @param graph the graph.
      */
-    public SecondAlgorithm(Graph graph) {
+    public DeepFirstAlgorithm(Graph graph) {
         this.maxSize = 0;
         this.maxClique = new ArrayList<>();
         this.graph = graph;
@@ -126,18 +124,18 @@ public class SecondAlgorithm {
         Graph graph = new Graph();
         graph.createGraph(numero);
 
-        SecondAlgorithm secondAlgorithm = new SecondAlgorithm(graph);
-        secondAlgorithm.findMaxClique();
+        DeepFirstAlgorithm deepFirstAlgorithm = new DeepFirstAlgorithm(graph);
+        deepFirstAlgorithm.findMaxClique();
 
-        //System.out.println("Tamaño del clique máximo: " + secondAlgorithm.getMaxSize());
+        //System.out.println("Tamaño del clique máximo: " + deepFirstAlgorithm.getMaxSize());
         System.out.print("Clique máximo: ");
-        //System.out.println("Vértices del clique máximo: " + secondAlgorithm.getMaxClique());
+        //System.out.println("Vértices del clique máximo: " + deepFirstAlgorithm.getMaxClique());
         //
-        for (Vertex vertex : secondAlgorithm.getMaxClique()) {
+        for (Vertex vertex : deepFirstAlgorithm.getMaxClique()) {
             System.out.print(vertex.getLabel() + " ");
         }
 
-        System.out.println("\nTamaño del clique máximo: " + secondAlgorithm.getMaxSize());
+        System.out.println("\nTamaño del clique máximo: " + deepFirstAlgorithm.getMaxSize());
 
         System.out.println("\nTotal assignments: "+ a);
         System.out.println("Total comparisons: "+ c);

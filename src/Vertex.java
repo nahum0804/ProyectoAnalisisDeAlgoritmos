@@ -60,4 +60,13 @@ public class Vertex {
     public boolean isAdjacent(Vertex vertex) {
         return adjacentVertices.contains(vertex);
     }
+
+    /**
+     * Get the adjacent vertices of this vertex.
+     *
+     * @return the adjacent vertices of this vertex.
+     */
+    public List<Vertex> getAdjacentVertices() {
+        return adjacentVertices;
+    }
 }

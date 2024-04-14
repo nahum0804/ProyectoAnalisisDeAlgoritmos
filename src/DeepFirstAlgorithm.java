@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Deep-first search algorithm to find the maximum clique in a graph.
+ * The algorithm uses a recursive approach to explore all the possible cliques in the graph.
+ */
 public class DeepFirstAlgorithm {
     private int maxSize;
     private List<Vertex> maxClique;

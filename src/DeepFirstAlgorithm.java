@@ -145,4 +145,3 @@ public class DeepFirstAlgorithm {
         System.out.println("Total comparisons: "+ c);
     }
 }
-

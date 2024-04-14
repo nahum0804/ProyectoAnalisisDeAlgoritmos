@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c5c1ddda-61b6-43a7-a75b-950a16d85664" name="Changes" comment="Sort functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BronKerboschAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BronKerboschAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DeepFirstAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DeepFirstAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -13,13 +13,17 @@ public class BronKerboschAlgorithm {
 
     public void findMaxClique() {
         Set<Vertex> verticesSet = new HashSet<>(graph.getVertices().values());
+        a++;
+
         bronKerbosch(verticesSet, new HashSet<>(), new HashSet<>());
+        a++;
     }
 
     private void bronKerbosch(Set<Vertex> candidates, Set<Vertex> selected, Set<Vertex> excluded) {
         if (candidates.isEmpty() && excluded.isEmpty()) {
             c++;
             if (selected.size() > maxClique.size()) {
+                c++;
                 maxClique = new HashSet<>(selected);
                 a++;
             }
@@ -27,22 +31,28 @@ public class BronKerboschAlgorithm {
         }
 
         List<Vertex> candidatesCopy = new ArrayList<>(candidates);
+        a++;
         for (Vertex v : candidatesCopy) {
             List<Vertex> neighbors = graph.getVertices().get(v.getLabel()).getAdjacentVertices();
+            a++;
             bronKerbosch(intersect(candidates, new HashSet<>(neighbors)), union(selected, v), intersect(excluded, new HashSet<>(neighbors)));
             candidates.remove(v);
+            a++;
             excluded.add(v);
+            a++;
         }
     }
 
     private Set<Vertex> intersect(Set<Vertex> set1, Set<Vertex> set2) {
         Set<Vertex> intersection = new HashSet<>(set1);
+        a++;
         intersection.retainAll(set2);
         return intersection;
     }
 
     private Set<Vertex> union(Set<Vertex> set1, Vertex vertex) {
         Set<Vertex> union = new HashSet<>(set1);
+        a++;
         union.add(vertex);
         return union;
     }

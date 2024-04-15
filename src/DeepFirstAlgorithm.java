@@ -1,3 +1,4 @@
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -124,6 +125,9 @@ public class DeepFirstAlgorithm {
      */
     public static void start(int numero) {
 
+        //Tomar el tiempo al ejecutarse
+        long tiempo = System.nanoTime();
+
         // Crear el grafo
         Graph graph = new Graph();
         graph.createGraph(numero);
@@ -141,7 +145,12 @@ public class DeepFirstAlgorithm {
 
         System.out.println("\nTamaño del clique máximo: " + deepFirstAlgorithm.getMaxSize());
 
+        //Calcular el tiempo de ejecución
+        long tiempoFin = System.nanoTime();
+        long tiempoDiferencia = tiempoFin - tiempo;
+
         System.out.println("\nTotal assignments: "+ a);
         System.out.println("Total comparisons: "+ c);
+        System.out.println("Tiempo de ejecución: 0." + tiempoDiferencia + " segundos");
     }
 }

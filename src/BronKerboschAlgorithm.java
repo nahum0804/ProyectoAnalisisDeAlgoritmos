@@ -114,6 +114,9 @@ public class BronKerboschAlgorithm {
      * @param numero the number of vertices in the graph.
      */
     public static void start(int numero) {
+        //Tomar el tiempo al ejecutarse
+        long tiempo = System.nanoTime();
+
         Graph graph = new Graph();
         graph.createGraph(numero);
 
@@ -126,7 +129,12 @@ public class BronKerboschAlgorithm {
         }
         System.out.println("\nTamaño del clique máximo: " + bronKerboschAlgorithm.getMaxSize());
 
+        //Calcular el tiempo de ejecución
+        long tiempoFin = System.nanoTime();
+        long tiempoDiferencia = tiempoFin - tiempo;
+
         System.out.println("\nTotal assignments: " + a);
         System.out.println("Total comparisons: " + c);
+        System.out.println("Tiempo de ejecución: 0." + tiempoDiferencia + " segundos");
     }
 }
